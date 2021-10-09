@@ -25,7 +25,7 @@ SECRET_KEY = '(o%y^j1ba$-p9@9ld5t(dmj4ersvf&@+^!a08xi$xse%exp@ar'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','bmsceplacement-360.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','bmsceplacement360.herokuapp.com']
 
 
 # Application definition
@@ -123,18 +123,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    )
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+#     )
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = '/members/login/'
